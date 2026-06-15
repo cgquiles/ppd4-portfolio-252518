@@ -9,58 +9,30 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --orange: #E87722;
-  --orange-lt: #F5C49A;
-  --orange-bg: #FEF4EB;
-  --dark: #1C1C1C;
-  --mid: #555555;
-  --light: #F0EDE8;
-  --white: #FAFAFA;
-  --border: #E0DBD5;
-  --nav-w: 220px;
-  --max: 760px;
+  --orange: #E87722; --orange-lt: #F5C49A; --orange-bg: #FEF4EB;
+  --dark: #1C1C1C; --mid: #555555; --light: #F0EDE8;
+  --white: #FAFAFA; --border: #E0DBD5; --nav-w: 220px; --max: 760px;
 }
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--dark); line-height: 1.7; font-size: 15px; }
-
-/* NAV */
 #sidenav {
-  position: fixed; top: 0; left: 0;
-  width: var(--nav-w); height: 100vh;
-  background: var(--dark);
-  display: flex; flex-direction: column;
+  position: fixed; top: 0; left: 0; width: var(--nav-w); height: 100vh;
+  background: var(--dark); display: flex; flex-direction: column;
   padding: 32px 0 24px; overflow-y: auto; z-index: 100;
 }
 .nav-brand { padding: 0 20px 24px; border-bottom: 1px solid #333; }
-.nav-brand .name { font-size: 13px; font-weight: 600; color: var(--white); letter-spacing: 0.02em; line-height: 1.4; }
-.nav-brand .sub { font-size: 11px; color: #888; margin-top: 3px; letter-spacing: 0.04em; text-transform: uppercase; }
+.nav-brand .name { font-size: 13px; font-weight: 600; color: var(--white); letter-spacing: .02em; line-height: 1.4; }
+.nav-brand .sub { font-size: 11px; color: #888; margin-top: 3px; letter-spacing: .04em; text-transform: uppercase; }
 .nav-brand .oline { width: 28px; height: 2px; background: var(--orange); margin-top: 12px; }
 #sidenav nav { margin-top: 20px; flex: 1; }
-.nav-group { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #555; padding: 16px 20px 6px; }
-#sidenav a {
-  display: block; padding: 8px 20px;
-  font-size: 13px; font-weight: 400; color: #aaa;
-  text-decoration: none; border-left: 2px solid transparent;
-  transition: color .15s, border-color .15s, background .15s;
-}
+.nav-group { font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #555; padding: 16px 20px 6px; }
+#sidenav a { display: block; padding: 8px 20px; font-size: 13px; font-weight: 400; color: #aaa; text-decoration: none; border-left: 2px solid transparent; transition: color .15s, border-color .15s, background .15s; }
 #sidenav a:hover { color: var(--white); background: rgba(255,255,255,.05); }
 #sidenav a.active { color: var(--white); border-left-color: var(--orange); background: rgba(232,119,34,.1); font-weight: 500; }
 .nav-footer { padding: 16px 20px 0; border-top: 1px solid #333; font-size: 11px; color: #555; line-height: 1.5; }
-
-/* MAIN */
 #main { margin-left: var(--nav-w); min-height: 100vh; }
-
-/* HERO */
-#hero {
-  background: var(--dark); padding: 80px 64px 64px;
-  position: relative; overflow: hidden;
-}
-#hero::before {
-  content: ''; position: absolute; top: 0; right: 0;
-  width: 360px; height: 360px;
-  background: radial-gradient(circle at top right, rgba(232,119,34,.16), transparent 70%);
-  pointer-events: none;
-}
+#hero { background: var(--dark); padding: 80px 64px 64px; position: relative; overflow: hidden; }
+#hero::before { content: ''; position: absolute; top: 0; right: 0; width: 360px; height: 360px; background: radial-gradient(circle at top right, rgba(232,119,34,.16), transparent 70%); pointer-events: none; }
 .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
 .hero-name { font-size: 44px; font-weight: 700; color: var(--white); line-height: 1.15; letter-spacing: -.02em; max-width: 580px; }
 .hero-name span { color: var(--orange); }
@@ -69,29 +41,17 @@ body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--
 .hm-item { display: flex; flex-direction: column; gap: 3px; }
 .hm-item .lbl { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #555; }
 .hm-item .val { font-size: 13px; color: #ccc; font-weight: 500; }
-
-/* SECTIONS */
 .section { padding: 64px; border-bottom: 1px solid var(--border); }
 .section:nth-child(even) { background: var(--white); }
 .section:nth-child(odd) { background: var(--light); }
 #intro { background: var(--white); }
-
 .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
 .sec-title { font-size: 27px; font-weight: 700; color: var(--dark); letter-spacing: -.01em; line-height: 1.2; margin-bottom: 6px; }
 .divider { width: 36px; height: 3px; background: var(--orange); margin: 16px 0 28px; border-radius: 2px; }
-
 .section p { font-size: 15px; color: var(--dark); line-height: 1.75; margin-bottom: 16px; max-width: var(--max); }
 .section p:last-child { margin-bottom: 0; }
-
 h3 { font-size: 16px; font-weight: 700; color: var(--dark); margin: 32px 0 10px; letter-spacing: -.01em; max-width: var(--max); }
-h3::before {
-  content: ''; display: inline-block;
-  width: 6px; height: 6px; background: var(--orange);
-  border-radius: 50%; margin-right: 10px;
-  vertical-align: middle; position: relative; top: -1px;
-}
-
-/* PLO HEADER */
+h3::before { content: ''; display: inline-block; width: 6px; height: 6px; background: var(--orange); border-radius: 50%; margin-right: 10px; vertical-align: middle; position: relative; top: -1px; }
 .plo-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 24px; flex-wrap: wrap; }
 .plo-def { font-size: 14px; color: var(--mid); font-style: italic; line-height: 1.55; max-width: 520px; border-left: 3px solid var(--orange-lt); padding-left: 14px; }
 .level-badge { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 5px; flex-shrink: 0; }
@@ -100,24 +60,14 @@ h3::before {
 .pip { width: 20px; height: 5px; border-radius: 3px; background: var(--border); }
 .pip.on { background: var(--orange); }
 .level-badge .ln { font-size: 11px; color: var(--mid); margin-top: 2px; }
-
-/* EVIDENCE CARD */
-.ev-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-left: 4px solid var(--orange); border-radius: 4px;
-  padding: 20px 22px; margin: 20px 0; max-width: var(--max);
-}
+.ev-card { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--orange); border-radius: 4px; padding: 20px 22px; margin: 20px 0; max-width: var(--max); }
 .ev-card .ev-lbl { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; }
 .ev-card .ev-title { font-size: 14px; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
 .ev-card .ev-desc { font-size: 13px; color: var(--mid); line-height: 1.6; }
-
-/* REFLECTION BLOCK */
 .ref-block { background: var(--orange-bg); border-radius: 6px; padding: 22px 24px; margin: 24px 0; max-width: var(--max); }
 .ref-block .rl { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
-.ref-block p { font-size: 14px !important; color: var(--dark) !important; margin-bottom: 10px !important; }
+.ref-block p { font-size: 14px !important; color: var(--dark) !important; margin-bottom: 10px !important; max-width: none !important; }
 .ref-block p:last-child { margin-bottom: 0 !important; }
-
-/* PLO TABLE */
 .plo-table { width: 100%; max-width: var(--max); border-collapse: collapse; margin: 24px 0; font-size: 14px; }
 .plo-table th { background: var(--dark); color: var(--white); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 12px 16px; text-align: left; }
 .plo-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; color: var(--dark); }
@@ -126,33 +76,22 @@ h3::before {
 .plo-table td:first-child { font-weight: 600; white-space: nowrap; width: 130px; }
 .plo-table td:nth-child(2) { width: 60px; text-align: center; }
 .badge { display: inline-block; background: var(--orange); color: white; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 3px; }
-
-/* HELI GRID */
 .heli-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: var(--max); margin: 24px 0; }
 .heli-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 20px; }
 .heli-card .hc-lbl { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); margin-bottom: 8px; }
 .heli-card .hc-title { font-size: 15px; font-weight: 600; color: var(--dark); margin-bottom: 8px; line-height: 1.3; }
 .heli-card p { font-size: 13px !important; color: var(--mid) !important; line-height: 1.6 !important; max-width: none !important; }
-
-/* SMART TABLE */
 .smart-table { width: 100%; max-width: var(--max); border-collapse: collapse; margin: 20px 0; font-size: 14px; }
 .smart-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.6; }
 .smart-table td:first-child { font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--orange); white-space: nowrap; width: 110px; background: var(--orange-bg); }
-
-/* AI BLOCK */
 .ai-block { background: #f5f5f5; border: 1px solid var(--border); border-radius: 6px; padding: 24px; max-width: var(--max); font-size: 14px; color: var(--mid); line-height: 1.65; }
 .ai-block strong { color: var(--dark); }
 .ai-block p { font-size: 14px !important; margin-bottom: 12px !important; max-width: none !important; }
 .ai-block .ref-note { color: #aaa; font-size: 12px; margin-top: 16px; }
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
-  #sidenav { display: none; }
-  #main { margin-left: 0; }
-  .section { padding: 40px 24px; }
-  #hero { padding: 48px 24px 40px; }
-  .hero-name { font-size: 30px; }
-  .heli-grid { grid-template-columns: 1fr; }
+  #sidenav { display: none; } #main { margin-left: 0; }
+  .section { padding: 40px 24px; } #hero { padding: 48px 24px 40px; }
+  .hero-name { font-size: 30px; } .heli-grid { grid-template-columns: 1fr; }
   .plo-table td:first-child { white-space: normal; width: auto; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -188,7 +127,7 @@ h3::before {
   <section id="hero">
     <div class="hero-eyebrow">Personal &amp; Professional Development 4</div>
     <div class="hero-name">Development<br>Portfolio &mdash; <span>Year 2</span></div>
-    <p class="hero-desc">This portfolio documents how I developed across Semester 4 as a logistics engineering student and as a professional. It covers five Programme Learning Outcomes through specific evidence, honest reflection, and a forward-looking internship objective.</p>
+    <p class="hero-desc">This portfolio reflects my development throughout Semester 4. It covers five Programme Learning Outcomes through academic work, real-world experience at CEVA Logistics, and honest reflection on what changed in my thinking this year.</p>
     <div class="hero-meta">
       <div class="hm-item"><span class="lbl">Student</span><span class="val">Carlos Granados Quiles</span></div>
       <div class="hm-item"><span class="lbl">Number</span><span class="val">252518</span></div>
@@ -202,28 +141,26 @@ h3::before {
     <div class="eyebrow">Section 1</div>
     <h2 class="sec-title">Introduction</h2>
     <div class="divider"></div>
-    <p>I am Carlos Granados Quiles, a Logistics Engineering student on the MBO route at Breda University of Applied Sciences. I joined the programme in Year 2 in September 2025, entering directly without completing Year 1 at BUas. That meant I had to build a working understanding of the foundational curriculum while keeping pace with Year 2 coursework at the same time. I treated that gap as a practical problem to solve, not as a disadvantage.</p>
-    <p>Alongside my studies, I work full-time as Warehouse Support at CEVA Logistics in Tilburg, where I have been employed for approximately three years &mdash; originally under DB Schenker before CEVA took over operations. My formal job title does not reflect what I actually do. Day-to-day, I handle inventory control, build internal tools in Power Apps and Power BI, cover multiple departments, and contribute to engineering projects including warehouse layout changes and the Serial Numbers Scanning implementation.</p>
-    <p>This parallel track between full-time work and full-time study has shaped how I approach every course component this semester. I do not treat academic work as separate from professional reality. When I designed a slotting intervention for CIR3B, I was solving a real problem in a warehouse I walk through every day. When I built the Power BI dashboard for ASCM, I was applying skills I had already used in a live operational context. That connection is not coincidental &mdash; it is how I have chosen to study.</p>
-    <p>This portfolio reflects my development across Semester 4. It covers five Programme Learning Outcomes: Research, Design, Advise, Implement, and Develop. For each PLO I present specific evidence, explain what I did and why, and reflect on what changed in my thinking compared to earlier semesters. I also include a helicopter view that looks back honestly at the year and forward to the internship I will begin at CEVA in September 2026.</p>
-    <p>My career goal is to move from operational and administrative work into analytical and process improvement roles. This portfolio documents why I am ready for that next step.</p>
+    <p>I am Carlos Granados Quiles, a Logistics Engineering student on the MBO route at Breda University of Applied Sciences. I joined the programme in Year 2 in September 2025, which meant catching up on foundational coursework while keeping pace with current modules. I treated that as a practical problem to solve rather than a disadvantage.</p>
+    <p>Outside of my studies, I work full-time at CEVA Logistics in Tilburg. I have been there for three years, originally under DB Schenker before a company merger. My job title is Warehouse Support, but the actual work goes well beyond that. I manage inventory, develop internal tools in Power Apps and Power BI, and contribute to engineering projects including warehouse layout changes and a serial number scanning rollout.</p>
+    <p>This combination of full-time work and full-time study shapes how I approach every assignment. When I worked on the CIR3B project, I was studying a problem in a warehouse I work in every day. When I built the ASCM Power BI dashboard, I was applying tools I already use professionally. For the DS&amp;AI assignment, I analysed real outbound delivery data from a logistics operation and built a working dashboard using Python, GitHub, and VS Code. These are not separate activities; they are the same learning applied in different contexts.</p>
+    <p>This portfolio covers five Programme Learning Outcomes: Research, Design, Advise, Implement, and Develop. For each one I explain what I contributed, how I grew compared to Semester 3, and what I would do differently. I also include a helicopter view that looks back honestly at the year and forward to the internship I plan to start at CEVA in September 2026.</p>
+    <p>My goal is to move from operational and administrative work into analytical and process improvement roles. This portfolio documents the progress I have made toward that transition.</p>
   </section>
 
   <section class="section" id="overview">
     <div class="eyebrow">Section 2</div>
     <h2 class="sec-title">PLO Overview</h2>
     <div class="divider"></div>
-    <p>The table below maps each of the five Programme Learning Outcomes to the required level and the primary evidence I use in this portfolio.</p>
+    <p>The table below maps each PLO to the required level and my primary evidence. Where projects were done in a group, I indicate what my specific contribution was.</p>
     <table class="plo-table">
-      <thead>
-        <tr><th>PLO</th><th>Level</th><th>Primary Evidence</th></tr>
-      </thead>
+      <thead><tr><th>PLO</th><th>Level</th><th>Primary Evidence &amp; My Contribution</th></tr></thead>
       <tbody>
-        <tr><td>Research</td><td style="text-align:center">2</td><td>CIR3B &mdash; Waste disposal time study at CEVA Logistics Tilburg. Multi-method field research with regression analysis and DESTEP. Scope change decision made independently based on field evidence.</td></tr>
-        <tr><td>Design</td><td style="text-align:center">2</td><td>RSB/RSTB &mdash; Zeeman circular baby clothing project. Three-pillar circular business model. Financial feasibility model built with live formulas. Structural error identified and corrected independently.</td></tr>
-        <tr><td>Advise</td><td style="text-align:center">2</td><td>CIR3B &mdash; Slotting recommendation for 67 cable reel SKUs to bays 023&ndash;028. Data-backed, zero-capex, scope bounded to the measured aisle range. Honest reflection on ASCM 4.0 advisory gap.</td></tr>
-        <tr><td>Implement</td><td style="text-align:center">1</td><td>ASCM &mdash; Power BI SCM Finance Dashboard. <span class="badge">9.2</span> &nbsp; DAX measures, relational data model, built independently under AI Level 2 compliance.</td></tr>
-        <tr><td>Develop</td><td style="text-align:center">1</td><td>Full semester arc &mdash; DPP/ESPR industry connection, proactive AI compliance flag in ASCM, learning transfer from ASCM 4.0 to CIR3B advisory scoping. Systematic reflection on growth since Semester 3.</td></tr>
+        <tr><td>Research</td><td>2</td><td>CIR3B (duo project): I proposed the project, identified cable reels as the focus, collected SAP data, and co-designed the regression analysis. DS&amp;AI A3 (solo): 5-layer B2B/B2C classifier on 61,231 outbound delivery lines.</td></tr>
+        <tr><td>Design</td><td>2</td><td>RSB/RSTB Zeeman (group): I owned the financial model sections, identified and corrected a structural error, and rebuilt the Investment tab independently.</td></tr>
+        <tr><td>Advise</td><td>2</td><td>CIR3B (duo): I proposed the slotting recommendation and defended the scope change to the lecturer. DS&amp;AI A3 (solo): phased pilot relocation recommendation with priority scoring.</td></tr>
+        <tr><td>Implement</td><td>1</td><td>ASCM Power BI dashboard (solo): <span class="badge">9.2</span> &nbsp; All DAX measures and the relational data model built independently. DS&amp;AI A3 (solo): Streamlit dashboard deployed via GitHub and VS Code.</td></tr>
+        <tr><td>Develop</td><td>1</td><td>Semester arc: EU ESPR/DPP connection through Zeeman project, proactive AI compliance flag in ASCM, reflection on ASCM Pitch feedback, use of professional tools (GitHub, VS Code) in academic work.</td></tr>
       </tbody>
     </table>
   </section>
@@ -241,22 +178,25 @@ h3::before {
       </div>
     </div>
     <div class="ev-card">
-      <div class="ev-lbl">Primary Evidence</div>
-      <div class="ev-title">CIR3B &mdash; Waste Disposal Time Study, CEVA Logistics Tilburg</div>
-      <div class="ev-desc">Field research study on non-value-adding waste disposal time in picking operations. Methods: structured time observations (30+), regression analysis, DESTEP. Scope: cable reel SKUs, aisles 316&ndash;323.</div>
+      <div class="ev-lbl">Primary Evidence &mdash; Duo Project</div>
+      <div class="ev-title">CIR3B: Waste Disposal Time Study, CEVA Logistics Tilburg</div>
+      <div class="ev-desc">I proposed the project and identified the problem. My specific contributions: proposing cable reel SKUs as the research focus, collecting SAP data, co-executing field observations in aisles 316&ndash;323, and recommending the scope change from replenishment to picking workers.</div>
     </div>
-    <h3>What I Did</h3>
-    <p>For CIR3B I independently designed and executed a time study at CEVA Logistics in Tilburg. The research question was straightforward: how much non-value-adding time do picking workers spend on waste disposal, and what is driving it?</p>
-    <p>I started with a DESTEP analysis to frame the broader context. The sustainability angle was immediately relevant &mdash; CEVA has a stated target of 95% waste recycling, yet the current container layout forces unnecessary travel for picking workers. The technology angle came in through my use of regression analysis to model the relationship between walking distance and disposal time, rather than relying on simple averages. The internationalisation dimension was present in the regulatory background: EU waste handling requirements and CEVA&rsquo;s global sustainability commitments both shape how the warehouse is expected to operate.</p>
-    <p>I carried out over 30 timed field observations across aisles 316 to 323, documenting disposal trips made by picking workers. Early in the process I identified that the original scope &mdash; covering replenishment workers &mdash; was misaligned with operational reality. Replenishment behaviour was too variable to measure reliably. I recommended a scope change to focus on picking workers. That decision was mine alone. I presented the reasoning to my supervisor, got sign-off, and documented the change explicitly. I then narrowed the study to cable reel SKUs after observing that their packaging configurations (types A, B, and C) generated disproportionate disposal volume relative to other SKU categories in the measured aisle range.</p>
+    <div class="ev-card">
+      <div class="ev-lbl">Supporting Evidence &mdash; Solo</div>
+      <div class="ev-title">DS&amp;AI A3: Warehouse Zone Optimisation, SEBN Tilburg</div>
+      <div class="ev-desc">Solo analysis of 61,231 outbound delivery lines. I built a five-layer B2B/B2C classifier from scratch because the raw dataset had no pre-existing labels. When Apriori association mining returned zero results, I documented the reason and pivoted to direct co-pick analysis.</div>
+    </div>
+    <h3>What I Did and What Was Mine</h3>
+    <p>CIR3B was a duo project. My classmate and I worked together on the DESTEP analysis, the regression modelling, and the field observations. What I specifically initiated was identifying cable reel SKUs as the focus. I noticed during my own shifts at CEVA that cable reel packaging generates significantly more waste than other SKU categories in that area, and I proposed this to my classmate as the target. That decision shaped the entire study.</p>
+    <p>The scope change from replenishment workers to picking workers was also my call. Early observations showed replenishment patterns were too variable to produce reliable data. I flagged this to my classmate first, then presented the reasoning to the CIR3A lecturer to get sign-off. I documented the change and we continued on the revised basis.</p>
+    <p>For DS&amp;AI Assignment 3, everything was solo. The key research judgment was recognising that Apriori was the wrong tool for this dataset. The median B2C basket at SEBN contains only one SKU, so there are almost no multi-item baskets to mine. Rather than lower the thresholds until something appeared, I tested three different settings, documented why all three failed, and switched to direct delivery-level co-pick analysis. That decision produced a more interpretable result than Apriori would have anyway.</p>
     <h3>Why This Shows Level 2</h3>
-    <p>Level 2 Research requires taking multiple perspectives into account, not just operational ones. I did this in three ways. First, the sustainability lens: I connected the slotting problem directly to CEVA&rsquo;s 95% recycling target. Second, the technology lens: I used regression analysis rather than descriptive statistics &mdash; a methodological choice that requires understanding correlation limits and model assumptions. Third, the internationalisation lens: the DESTEP covered EU regulatory context and CEVA&rsquo;s global logistics footprint, anchoring a warehouse-level study in a company-wide frame.</p>
-    <p>The scope change is also evidence of critical judgment. When early field data showed inconsistent patterns in replenishment behaviour, I did not average out the noise. I flagged the methodological problem, recommended a correction, and documented the reasoning so it could be challenged. That is what research independence looks like in a live operational environment.</p>
+    <p>Level 2 Research requires taking sustainability, internationalisation, and technology perspectives into account, not just the operational question. In CIR3B, the sustainability angle was real: CEVA has waste reduction targets, and reducing unnecessary picker travel supports those directly. The technology angle was regression analysis over simple averages. In DS&amp;AI, the internationalisation angle was built into the data: four warehouses across the Netherlands, UK, Italy, and Sweden, with the Netherlands site selected as focus based on its B2C share.</p>
+    <p>Both projects also show critical judgment about the research process itself. In CIR3B I changed the scope when the data showed the original approach was flawed. In DS&amp;AI I changed the method when Apriori produced nothing useful. Level 2 is not just about applying multiple frameworks; it is about knowing when to adjust.</p>
     <div class="ref-block">
-      <div class="rl">Reflection &mdash; Growth since Semester 3</div>
-      <p>In Semester 3, my analytical work was strong on method but I described my research process in terms of what I did, not why I made specific decisions. The PPD3 feedback told me my reflections read like conclusions rather than showing thinking. In Semester 4 I changed that deliberately.</p>
-      <p>The clearest example is the scope change. In Semester 3 I would have written: &ldquo;I changed the scope after observing that replenishment data was unreliable.&rdquo; This semester I can say: I made a judgment call in a live warehouse, presented the reasoning to a supervisor, took ownership of the change, and documented it so it could be challenged. That is a different level of accountability.</p>
-      <p>The other shift is in tool selection. In Semester 3 I applied frameworks because they were required. In Semester 4 I used regression analysis because it was the right tool for the specific question. That distinction matters for Level 2.</p>
+      <div class="rl">Reflection: Growth since Semester 3</div>
+      <p>In Semester 3, I was good at executing methods but weak at explaining why I chose them or why I changed course. My PPD3 reflections described outcomes rather than decisions. This semester the difference is in the scope change moment. In Semester 3 I would have mentioned it briefly. This semester I can explain the reasoning: the data had too much variance, continuing would have produced an unreliable result, so I stopped, proposed a change, got sign-off, and documented it. That kind of professional accountability was not visible in my Semester 3 work.</p>
     </div>
   </section>
 
@@ -273,23 +213,20 @@ h3::before {
       </div>
     </div>
     <div class="ev-card">
-      <div class="ev-lbl">Primary Evidence</div>
-      <div class="ev-title">RSB/RSTB &mdash; Zeeman Circular Baby Clothing Project</div>
-      <div class="ev-desc">Three-pillar circular business model for Zeeman (1,300+ stores, 8 European countries). Owned sections 5.1 and 5.2: implementation design and financial feasibility model. Structural error in the model identified and corrected independently.</div>
+      <div class="ev-lbl">Primary Evidence &mdash; Group Project</div>
+      <div class="ev-title">RSB/RSTB: Zeeman Circular Baby Clothing Project</div>
+      <div class="ev-desc">Group project with shared contributions across the design pillars. My specific ownership: the financial model sections, including identifying and correcting a structural error in the sorting cost calculations and independently rebuilding the Investment tab.</div>
     </div>
-    <h3>What I Did</h3>
-    <p>In the RSB/RSTB project my group designed a viable circular business model for Zeeman&rsquo;s baby clothing line. I owned sections 5.1 and 5.2 &mdash; the implementation design and the financial feasibility model. The design has three pillars.</p>
-    <p><strong>Design for Circularity:</strong> switching to mono-material garments certified under GOTS or GRS. I selected mono-material polyester blends over cotton-polyester mixes because GRS-certified recycled polyester maintains a closed loop at end of life. A blended fabric cannot.</p>
-    <p><strong>Extend the Life:</strong> a second-hand resale channel modelled on Het Goed and similar social enterprise sorting operations, where sorting economics work at lower volumes.</p>
-    <p><strong>Close the Loop:</strong> a QR-based Digital Product Passport take-back system, aligned with the EU ESPR regulation that will require DPPs across all textile categories by 2030. The design is built around a regulatory requirement that will eventually be mandatory, not just an innovation for its own sake.</p>
-    <p>During the project I identified a structural error in the financial model: sorting costs had been applied incorrectly in an earlier version. I took ownership of the correction, rebuilt the Investment tab with corrected logic, and documented what changed and why. The corrected model showed breakeven feasibility for a Netherlands pilot at a realistic return rate, before scaling to all eight European markets.</p>
+    <h3>What I Did and What Was Mine</h3>
+    <p>The Zeeman project was a group effort. We developed the three-pillar circular business model together: Design for Circularity (mono-material garments with sustainability certification), Extend the Life (second-hand resale channel), and Close the Loop (a take-back system aligned with EU ESPR regulation). I contributed to all three pillars during discussions and planning, but the financial model was my primary responsibility.</p>
+    <p>During the financial modelling work, I found that sorting costs had been applied incorrectly in an earlier version of the model. I flagged this to the group, corrected the logic, and rebuilt the Investment tab myself with properly structured formulas. This was my decision to fix and my responsibility to get right. The corrected model showed a more realistic picture of the breakeven conditions for a pilot rollout.</p>
+    <p>The three design pillars themselves were genuinely collaborative. The idea of using a QR-based Digital Product Passport for the take-back system came out of group discussion, and I cannot claim it as solely mine. What I can say is that I understood why it was the right choice: EU ESPR regulation will require DPPs across textile categories by 2030, so designing around that regulatory timeline makes the proposal viable rather than just innovative.</p>
     <h3>Why This Shows Level 2</h3>
-    <p>Level 2 Design requires justifying design choices, not just describing them. For every major decision in sections 5.1 and 5.2 I wrote an explicit justification. I applied sorting costs to 100% of returned garments rather than a lower assumed rate, because understating processing costs is the most common reason circular economy pilots fail at scale. That is a design decision grounded in real business risk, not a formatting choice.</p>
-    <p>The financial model correction is also evidence of Level 2 thinking. Catching a structural error mid-project and fixing it independently &mdash; rather than accepting the output or delegating it &mdash; shows that I treat design as a personal responsibility.</p>
+    <p>Level 2 Design requires justifying choices, not just describing them. The financial model correction is the clearest example of this from my individual work. I did not just find an error and report it. I took ownership, fixed it, and rebuilt it in a way that makes every assumption visible and challengeable. That is a different level of design accountability than producing an output and hoping it is correct.</p>
+    <p>I also applied sorting costs to 100% of returned garments rather than a lower assumed rate. That was a deliberate choice grounded in real business risk: underestimating processing costs is the most common reason circular economy pilots fail at scale.</p>
     <div class="ref-block">
-      <div class="rl">Reflection &mdash; Growth since Semester 3</div>
-      <p>In Semester 3, my Decathlon cross-border supply chain design was initially cost-driven. Feedback pushed me to add sustainability and service dimensions &mdash; and I added them, but reactively. In Semester 4, the Zeeman design had financial viability, environmental compliance, and regulatory readiness embedded from the start. I built those in because I understood why they mattered, not because feedback told me to.</p>
-      <p>The other shift is precision. In Semester 3 my design outputs contained approximations I could not fully defend. The Zeeman financial model is built to be challenged: every assumption is visible, every formula references a source cell rather than a hardcoded number. That is the difference between a design that looks complete and one that holds up to scrutiny.</p>
+      <div class="rl">Reflection: Growth since Semester 3</div>
+      <p>In Semester 3 my design work on the Decathlon cross-border case was initially cost-focused. Feedback pushed me to add sustainability and service dimensions. I added them, but because I was told to. In Semester 4, working on Zeeman, I understood why those dimensions belong in supply chain design before anyone asked. That shift from reactive to proactive is the real growth here. The financial model correction also reflects something I lacked in Semester 3: the willingness to go back and fix something rather than accept a flawed output.</p>
     </div>
   </section>
 
@@ -306,21 +243,25 @@ h3::before {
       </div>
     </div>
     <div class="ev-card">
-      <div class="ev-lbl">Primary Evidence</div>
-      <div class="ev-title">CIR3B &mdash; Slotting Recommendation, CEVA Logistics Tilburg</div>
-      <div class="ev-desc">Recommendation to relocate 67 cable reel SKUs to bays 023&ndash;028, adjacent to waste containers at bay 028. Zero capital expenditure. Scope bounded to the measured aisle range. Supported by regression-derived distance data.</div>
+      <div class="ev-lbl">Primary Evidence &mdash; Duo Project</div>
+      <div class="ev-title">CIR3B: Slotting Recommendation, CEVA Logistics Tilburg</div>
+      <div class="ev-desc">My contribution: proposing the slotting recommendation, scoping it to the measured area only, and defending the scope change to the lecturer. The recommendation requires only a WMS location update, no capital expenditure.</div>
     </div>
-    <h3>What I Did</h3>
-    <p>After completing the CIR3B research phase, I translated the findings into a concrete recommendation for CEVA warehouse management. The recommendation was specific: relocate 67 cable reel SKU locations to bays 023 to 028, adjacent to existing waste containers at bay 028. Implementation requires only a WMS location update and relabelling &mdash; no capital expenditure, no structural change, no dependency on external approval.</p>
-    <p>I backed every element of the recommendation with data. The regression model showed that trip time is a direct function of distance to the nearest container. I quantified the expected reduction in non-value-adding disposal time by applying the model to the proposed new distances. I also made a deliberate scoping decision: the recommendation covers the identified aisles only, not the full warehouse. Expanding scope beyond the measured area would mean extrapolating beyond the data &mdash; an advisory risk I chose not to take.</p>
-    <p>A second advisory output came from ASCM 4.0, the IMA-FIN business case, where I proposed a data-driven recommendation based on financial analysis. That assignment received a grade of 4.0. I include it here as an honest reflection point rather than as a strong evidence example.</p>
+    <div class="ev-card">
+      <div class="ev-lbl">Supporting Evidence &mdash; Solo</div>
+      <div class="ev-title">DS&amp;AI A3: Phased Pilot Recommendation, SEBN</div>
+      <div class="ev-desc">Solo advisory output: relocate three specific Zone C SKUs to Zone A as a low-risk pilot. Priority scoring using B2C benefit divided by B2B risk, because all 364 candidates also serve B2B operations and no move is risk-free.</div>
+    </div>
+    <h3>What I Did and What Was Mine</h3>
+    <p>In CIR3B, the recommendation to relocate cable reel SKUs to bays near the waste containers came from my analysis of the data. Bay 028 is where the waste containers are located, and the regression output showed that reducing walking distance directly reduces disposal time. I proposed this to my classmate and we aligned on it together. What was specifically mine was defending the scope change to the lecturer, which was the decision that made the recommendation possible in the first place. Without narrowing to picking workers handling cable reels, the data would not have been clean enough to support a specific recommendation.</p>
+    <p>The reason no relabelling is needed, only a WMS update, is because the SKUs stay in the same physical area; only their system location changes to trigger replenishment to the new spots. This makes the recommendation executable without any capital expenditure or operational disruption.</p>
+    <p>For DS&amp;AI, the advisory challenge was that every relocation candidate also appears in B2B same-zone deliveries. There are no risk-free moves. Rather than ignoring this constraint or presenting a clean list, I introduced a priority scoring method: B2C benefit divided by B2B risk plus one. This is parameter-free and produces a ranking that warehouse management can act on with a clear understanding of the trade-off.</p>
     <h3>Why This Shows Level 2</h3>
-    <p>Level 2 Advise requires substantiating recommendations with data or analyses. The CIR3B recommendation does this at every step: which SKUs, which bays, why zero capex, why limit scope to the measured area &mdash; each element is directly traceable to the research output. The decision to bound the scope rather than overgeneralise is itself an advisory judgment. In a professional context, overstating applicability damages credibility. I chose the more conservative framing deliberately.</p>
+    <p>Level 2 Advise requires substantiating recommendations with data or analysis. Both outputs do this. The CIR3B recommendation is traceable from the regression output to a specific area and a specific intervention. The DS&amp;AI recommendation names the constraint explicitly and uses a justified scoring method to work around it. In both cases, the scope of the advice matches the scope of the evidence. That discipline is something I had to learn.</p>
     <div class="ref-block">
-      <div class="rl">Reflection &mdash; The ASCM 4.0 Result</div>
-      <p>The ASCM 4.0 result is worth addressing directly. In that assignment I moved too quickly from analysis to recommendation. I had a directional view of what the answer should be and built the recommendation around it rather than letting the data lead. The result was a grade that accurately reflected that gap.</p>
-      <p>What I learned: a recommendation is only as strong as the data it stands on. In CIR3B I applied that lesson directly. I did not recommend relocating all waste-generating SKUs across the warehouse. I recommended relocating 67 specific SKUs in a defined aisle range, because those are the ones the data supports. That restraint is a direct result of what I got wrong in ASCM 4.0. The learning transferred.</p>
-      <p>Compared to Semester 3, where my advisory outputs were often well-structured but lacked specific numbers, this semester I can point to a recommendation with a named SKU count, a named bay range, and a model-derived expected outcome. That specificity is the growth.</p>
+      <div class="rl">Reflection: The ASCM Pitch Feedback</div>
+      <p>The ASCM Pitch received an overall grade of 7.1, but the component breakdown is worth being honest about. The Q&A component was marked insufficient because I did not name the most relevant KPI for the network problem. The Insight section was marked poor because my forward-looking reflections lacked depth and specificity. I also ran out of time during the presentation.</p>
+      <p>That feedback was accurate. A good advisory output is not just the written recommendation; you have to be able to defend it under questioning and connect it to the operational reality. In CIR3B and DS&amp;AI this semester, I focused on making recommendations that I could fully defend: bounded by the data, with every assumption named, and with constraints acknowledged rather than ignored. The difference between those outputs and the ASCM Pitch is visible if you compare them.</p>
     </div>
   </section>
 
@@ -337,21 +278,24 @@ h3::before {
       </div>
     </div>
     <div class="ev-card">
-      <div class="ev-lbl">Primary Evidence &nbsp; <span class="badge">9.2</span></div>
-      <div class="ev-title">ASCM &mdash; Power BI SCM Finance Dashboard</div>
-      <div class="ev-desc">Full implementation of a supply chain finance dashboard. DAX measures written independently. Relational data model built from scratch. Completed under AI Level 2 compliance &mdash; all logic and structure decisions were mine.</div>
+      <div class="ev-lbl">Primary Evidence &mdash; Solo &nbsp; <span class="badge">9.2</span></div>
+      <div class="ev-title">ASCM: Power BI SCM Finance Dashboard</div>
+      <div class="ev-desc">Fully individual assignment. I built all DAX measures, constructed the relational data model, and designed the visual layout. Completed under AI Level 2 compliance rules, meaning all logic and structure decisions were mine to make and defend.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-lbl">Supporting Evidence &mdash; Solo</div>
+      <div class="ev-title">DS&amp;AI A3: Streamlit Dashboard, deployed via GitHub</div>
+      <div class="ev-desc">Three-page interactive dashboard presenting zone optimisation results in plain operational language for a non-technical warehouse management audience. Built in Python, using VS Code and GitHub throughout. The same workflow I used to publish this portfolio.</div>
     </div>
     <h3>What I Did</h3>
-    <p>My primary evidence for Implement is the Power BI SCM Finance Dashboard built for ASCM. I translated a design plan into a working, published dashboard &mdash; independently, under AI Level 2 compliance rules. That meant I could use AI for code suggestions, but every logic decision, data model choice, and visual structure was mine to make and defend.</p>
-    <p>I constructed the relational data model from scratch, wrote DAX measures for the KPI calculations, and built the visual layout to make financial flows readable for a supply chain management audience. The assignment received a 9.2.</p>
-    <p>I want to be precise about scope. The dashboard is a working analytical tool. It is not a live operational implementation inside a real supply chain. Level 1 Implement asks for implementation in a well-defined situation with some guidance &mdash; that is an accurate description of what this was. I am not overstating it.</p>
-    <p>A secondary implementation output is the measurement plan execution in CIR3B: 30+ timed observations in a live warehouse, with method adaptation when early results showed scope problems. The same discipline applies &mdash; follow a plan, respond to deviations, document what changed.</p>
+    <p>Both assignments were fully solo. For the ASCM Power BI dashboard, I built the relational data model from scratch, wrote all DAX measures for the KPI calculations including Working Capital, DSO, DIO, DPO, and Cash Conversion Cycle, and added conditional formatting to the KPI cards. Every technical decision was mine. When I encountered an issue with a DAX formula mid-build, I resolved it independently. The AI Level 2 compliance constraint reinforced this: I had to understand every line of logic rather than just generate output.</p>
+    <p>For DS&amp;AI Assignment 3, I built the Streamlit dashboard and used GitHub for version control throughout the project. This was a deliberate choice, not a course requirement. Professional data engineering roles use these tools as standard, and working with them in an academic project was preparation for the kind of work I want to do. The same workflow, writing in VS Code, committing to GitHub, publishing a result, is what I used to build and publish this portfolio.</p>
+    <p>I want to be precise about scope. Both deliverables are working analytical tools. They are not live operational implementations inside a running supply chain. Level 1 Implement asks for implementation of improvements in well-defined situations. That is an accurate description of both.</p>
     <h3>Why This Shows Level 1</h3>
-    <p>Level 1 Implement requires taking responsibility for a defined output in a known situation. The Power BI dashboard meets this. Every technical decision was mine. When I hit an issue with DAX formula logic mid-build, I resolved it independently. The AI compliance constraint reinforced this: building under Level 2 rules meant I had to understand every line of logic. I could not generate output and submit it without being able to explain it.</p>
+    <p>Level 1 Implement requires full responsibility for a defined output. Both tools meet this. Every decision was mine. The ASCM assignments 2.1, 2.2, and 2.3 (individual in-class work) all scored 10/10, which shows consistent analytical execution across the semester, not just in the major dashboard project.</p>
     <div class="ref-block">
-      <div class="rl">Reflection &mdash; Growth since Semester 3</div>
-      <p>In Semester 3 I built Power Apps tools at CEVA independently, but those could not be submitted as academic evidence due to workplace privacy constraints. The ASCM Power BI dashboard is the first academic artefact that demonstrates the same level of technical ownership in a context where I can actually show the work.</p>
-      <p>The growth here is less about technical skill &mdash; I had that already from the Power Apps builds &mdash; and more about applying it in a structured academic context with documented compliance constraints. The 9.2 reflects that the transfer worked well.</p>
+      <div class="rl">Reflection: Growth since Semester 3</div>
+      <p>In Semester 3 I built Power Apps tools at CEVA that I could not submit as academic evidence due to workplace privacy constraints. The ASCM dashboard and DS&amp;AI Streamlit app are the first academic outputs that demonstrate the same technical ownership in a context where assessors can actually see the work. The grade of 9.2 for the dashboard reflects that the transfer from professional practice to academic context worked well.</p>
     </div>
   </section>
 
@@ -368,17 +312,15 @@ h3::before {
       </div>
     </div>
     <h3>Connection to Industry Trends</h3>
-    <p>The most direct connection between my academic work and sector practice this semester is the Zeeman DPP project. The EU ESPR regulation will require Digital Product Passports across all textile categories by 2030. I applied this directly by designing a QR-based DPP take-back system for Zeeman, which gave me practical understanding of how circular economy regulation will reshape reverse logistics in European retail. This is not a theoretical exercise &mdash; it is a policy that will affect warehouses like the one I work in.</p>
-    <p>Three trends from this semester connect directly to where logistics is heading. First, circular economy logistics: mandatory take-back systems and DPPs are coming, and any logistics engineer working in retail supply chains will need to understand reverse logistics design. Second, data-driven operations: both the Power BI dashboard and the regression analysis in CIR3B point to the same shift in the profession &mdash; analytical output is increasingly expected alongside operational output. Third, warehouse optimisation under labour constraints: the CIR3B methodology is transferable to other SKU categories and other sites.</p>
-    <h3>Three Development Moments This Semester</h3>
-    <p>I can point to three specific moments this semester where my thinking shifted, each traceable to a real decision and a visible consequence.</p>
-    <p>The first is the scope change in CIR3B. It would have been easier to continue with the original replenishment scope. Instead I flagged the problem early, took responsibility for the change, and documented it. The pattern I am building: when something is not working, name it early and fix it properly.</p>
-    <p>The second is the proactive AI compliance flag in ASCM. During the Power BI build I identified a potential compliance boundary, flagged it to the course coordinator in writing, and received written clarification before proceeding. That was not required of me. I did it because I understood the implications of getting it wrong, and because I wanted the output to be fully defensible.</p>
-    <p>The third is the learning transfer from ASCM 4.0 to CIR3B. After receiving a 4.0 for the advisory assignment, I did not treat it as a grading outcome to accept and move past. I used it to recalibrate how I scope recommendations. The direct effect is visible in how the CIR3B output was bounded. That transfer is what professional development actually looks like.</p>
+    <p>Three trends from this semester connect directly to where logistics is heading. First, circular economy regulation: the EU ESPR will require Digital Product Passports across textile categories by 2030. Working on the Zeeman project gave me practical understanding of what that regulatory shift requires in terms of supply chain design. Second, data-driven operations: both the Power BI dashboard and the DS&amp;AI zone optimisation project point to the same shift in the profession. Analytical output is increasingly expected alongside operational output. Third, omnichannel warehouse complexity: the DS&amp;AI project dealt directly with the tension between B2B and B2C operations sharing the same physical space and the same SKUs. This is a live challenge in the warehouse where I work.</p>
+    <h3>Four Specific Development Moments</h3>
+    <p>The PPD4 oral assessment feedback noted that I should work on turning my interest in analytics into a concrete project with an implementable result. The DS&amp;AI Assignment 3 is exactly that: real data, a real business question, a working dashboard, and a structured recommendation with a pilot plan. The feedback was accurate when it was given. By the end of the semester I had already acted on it.</p>
+    <p>The second moment is the scope change in CIR3B. Rather than continuing with an approach that was producing unreliable data, I named the problem, proposed the change, and got sign-off. That instinct, name problems early and fix them properly, is something I am actively building.</p>
+    <p>The third is the proactive AI compliance flag in ASCM. During the Power BI build I identified a potential compliance boundary and raised it in writing with the course coordinator before proceeding. That was not required. I did it because I understood what was at stake and wanted the output to be fully defensible.</p>
+    <p>The fourth is what I learned from the ASCM Pitch feedback. The Q&A component scored insufficient and the Insight section scored poor. Rather than treating that as a grade to accept and move on from, I used it to change how I approach advisory outputs. The effect is visible in CIR3B and DS&amp;AI: bounded scope, named constraints, defensible scoring methods.</p>
     <div class="ref-block">
-      <div class="rl">Reflection &mdash; Growth since Semester 3</div>
-      <p>In Semester 3 the Develop PLO was the weakest section of my portfolio. I wrote about industry trends at a surface level and the connection to my own practice was generic. The feedback was that my reflections described what I did without showing what changed.</p>
-      <p>This semester I can name specific moments where my thinking shifted, each traceable to a real situation and a visible consequence. That is different from reporting activities. It is what I understand professional development to mean now, and it is a direct result of taking the PPD3 feedback seriously and acting on it.</p>
+      <div class="rl">Reflection: Growth since Semester 3</div>
+      <p>In Semester 3 the Develop section of my portfolio was the weakest. I wrote about industry trends without connecting them to my own practice. The feedback said my reflections described what I did without showing what changed. This semester I can point to four specific moments where something shifted. Each one is traceable to a real decision and a visible consequence. That is the difference between reporting activities and actually developing professionally.</p>
     </div>
   </section>
 
@@ -386,41 +328,41 @@ h3::before {
     <div class="eyebrow">Section 8</div>
     <h2 class="sec-title">Helicopter View</h2>
     <div class="divider"></div>
-    <p>This section steps back from individual PLOs and looks at Year 2 as a whole &mdash; what I am proud of, what I would do differently, and where I am going next.</p>
+    <p>This section takes a step back from individual PLOs and looks at Year 2 as a whole: what I am proud of, what I would do differently, and where I am heading.</p>
     <div class="heli-grid">
       <div class="heli-card">
         <div class="hc-lbl">What I am proud of</div>
-        <div class="hc-title">The scope change decision in CIR3B</div>
-        <p>It would have been easier to continue with the original scope. Instead I flagged the problem, took responsibility, and fixed it properly. That is a pattern I want to carry into the internship year.</p>
+        <div class="hc-title">The scope change in CIR3B</div>
+        <p>It would have been easier to continue with data that was not going to produce a reliable result. I named the problem, proposed the fix, got sign-off, and documented it. That is the decision-making pattern I want to keep building.</p>
       </div>
       <div class="heli-card">
         <div class="hc-lbl">What I am proud of</div>
-        <div class="hc-title">Power BI dashboard &mdash; 9.2</div>
-        <p>The first time I could show academic assessors the same kind of analytical work I have been doing at CEVA for two years. Full technical ownership, documented compliance, strong result.</p>
+        <div class="hc-title">Power BI dashboard: 9.2</div>
+        <p>The first time I could show academic assessors the kind of analytical work I have been doing at CEVA for two years. Full individual ownership, AI Level 2 compliance, strong result.</p>
+      </div>
+      <div class="heli-card">
+        <div class="hc-lbl">What I am proud of</div>
+        <div class="hc-title">DS&amp;AI: a complete analytical project</div>
+        <p>Real data, real business question, working dashboard, structured recommendation with a pilot plan. This is what the oral assessment feedback was asking for, and I delivered it before the semester ended.</p>
       </div>
       <div class="heli-card">
         <div class="hc-lbl">What I would do differently</div>
-        <div class="hc-title">ASCM 4.0 &mdash; Moving too fast</div>
-        <p>I reached a conclusion before the data was ready to support it. In a professional advisory context that error would have cost credibility. I would slow down and stress-test assumptions before committing to a recommendation.</p>
-      </div>
-      <div class="heli-card">
-        <div class="hc-lbl">What I would do differently</div>
-        <div class="hc-title">Reflection depth in PPD3</div>
-        <p>The 6.5 in PPD3 was a fair result. I knew how to produce structured evidence but I was not yet writing reflections that showed genuine thinking changes. I worked on this in Semester 4 and the improvement is real, but there is further to go.</p>
+        <div class="hc-title">ASCM Pitch: Q&amp;A and depth</div>
+        <p>I ran out of time and was not specific enough under questioning. A recommendation must hold up when challenged, not just on paper. I knew this in theory; the Pitch showed I had not yet applied it consistently.</p>
       </div>
     </div>
     <h3>SMART Internship Objective</h3>
-    <p>My internship at CEVA begins in September 2026. I will be based in the engineering team under Clement, contributing to a project related to the operational integration of a newly added warehouse site into the existing Tilburg operation. My SMART learning objective for the internship:</p>
+    <p>I am in the process of arranging my internship at CEVA, planned to start in September 2026 within the engineering team. The project will focus on the operational integration of a recently added warehouse into the existing Tilburg operation. The scope is still being defined, but the direction is agreed.</p>
     <table class="smart-table">
       <tbody>
         <tr><td>Specific</td><td>Independently design and deliver at least one process optimisation recommendation for the new warehouse integration, supported by a data model or analytical tool I built myself.</td></tr>
-        <tr><td>Measurable</td><td>The deliverable must be formally reviewed and approved by Clement as independent work, not as a support contribution to someone else&rsquo;s project.</td></tr>
-        <tr><td>Achievable</td><td>I have the analytical tools and warehouse knowledge required. The gap to close is working at engineering-level project complexity rather than operational support level.</td></tr>
-        <tr><td>Relevant</td><td>This is the first formal project output I will produce as a Logistics Engineering student rather than as a Warehouse Support employee. It directly targets my career goal of moving from operational to analytical roles.</td></tr>
-        <tr><td>Time-bound</td><td>By the end of week 12 of 18 (approximately December 2026), leaving time for refinement and a second deliverable if the first is completed early.</td></tr>
+        <tr><td>Measurable</td><td>The deliverable is reviewed and approved by my engineering supervisor as independent work, not as a support contribution to someone else's project.</td></tr>
+        <tr><td>Achievable</td><td>I have the analytical tools and warehouse knowledge required. The gap I need to close is operating at engineering-project complexity rather than operational support level.</td></tr>
+        <tr><td>Relevant</td><td>This will be the first formal project output I produce as a Logistics Engineering student rather than as a Warehouse Support employee. It directly targets the transition from operational to analytical roles.</td></tr>
+        <tr><td>Time-bound</td><td>By the end of week 12 of 18, leaving time for refinement and a potential second deliverable.</td></tr>
       </tbody>
     </table>
-    <p style="margin-top:20px;">The development point I will focus on during the internship is independent project scoping. In both Semester 3 and Semester 4, my strongest work has been on execution once a scope was defined. The internship will require me to define the scope myself, defend it to engineering leadership, and adapt it when reality requires it. That is the next level.</p>
+    <p style="margin-top:20px;">The development point I want to focus on during the internship is independent project scoping. This semester my strongest work was on execution once a scope was set. The internship will require me to define the scope myself, defend it, and adapt it when reality requires it. That is the next step in my development as a logistics engineer.</p>
   </section>
 
   <section class="section" id="ai">
@@ -429,10 +371,10 @@ h3::before {
     <div class="divider"></div>
     <div class="ai-block">
       <p><strong>Declaration:</strong> I, Carlos Granados Quiles (252518), declare that I used AI tools in the preparation of this portfolio as described below.</p>
-      <p><strong>Tools used:</strong> Claude (Anthropic) for content generation, structure, and writing. Grammarly for grammar checks.</p>
-      <p><strong>How I used Claude:</strong> I used Claude to draft and write the portfolio text based on evidence, experiences, and decisions I provided. All underlying experiences, project outputs, grades, and professional situations described in this portfolio are real and my own. Claude helped me turn those raw inputs into structured, well-written text. I reviewed every section, corrected inaccuracies, and take full responsibility for the content.</p>
-      <p><strong>What is mine:</strong> Every piece of evidence cited in this portfolio comes from work I completed during Semester 4. The scope change decision in CIR3B, the financial model correction in the Zeeman project, the Power BI dashboard, the proactive AI compliance flag in ASCM &mdash; these are real events that I can describe, explain, and defend. The writing is AI-assisted; the substance is not.</p>
-      <p class="ref-note">Claude (Anthropic, 2026). https://claude.ai &mdash; used for drafting and writing throughout, in line with Level 4 AI use guidelines.<br>Grammarly Inc. (2026). https://www.grammarly.com &mdash; used for grammar checks throughout.</p>
+      <p><strong>Tools used:</strong> Claude (Anthropic) for drafting and writing the portfolio text. Grammarly for grammar checks. GitHub Copilot was used as a coding assistant during DS&amp;AI Assignment 3 development in VS Code.</p>
+      <p><strong>How I used Claude:</strong> I provided Claude with my real experiences, project outputs, grades, and decisions. Claude turned those inputs into structured, written text. I reviewed every section, corrected inaccuracies, confirmed what was mine versus group work, and take full responsibility for the content.</p>
+      <p><strong>What is mine:</strong> Every piece of evidence in this portfolio is real. The scope change decision in CIR3B, the financial model correction in the Zeeman project, the Power BI dashboard, the DS&amp;AI analysis and dashboard, the proactive AI compliance flag in ASCM: these are real events. The writing is AI-assisted. The substance is not.</p>
+      <p class="ref-note">Claude (Anthropic, 2026). https://claude.ai &mdash; used for drafting and writing throughout, in line with Level 4 AI use guidelines.<br>Grammarly Inc. (2026). https://www.grammarly.com &mdash; used for grammar checks throughout.<br>Microsoft. (2026). GitHub Copilot. https://github.com/features/copilot &mdash; used as a coding assistant during DS&amp;AI Assignment 3.</p>
     </div>
   </section>
 
