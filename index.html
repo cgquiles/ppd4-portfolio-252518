@@ -93,6 +93,7 @@ h3::before { content: ''; display: inline-block; width: 6px; height: 6px; backgr
 .visual-section .vs-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
 .visual-section img { width: 100%; border: 1px solid var(--border); border-radius: 4px; display: block; }
 .visual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: var(--max); margin: 24px 0; }
+.visual-grid.cols3 { grid-template-columns: 1fr 1fr 1fr; }
 .visual-grid .vg-item .vg-label { font-size: 11px; color: var(--mid); margin-top: 8px; text-align: center; }
 .visual-grid img { max-height: 380px; object-fit: contain; object-position: top; width: 100%; }
 .ref-section { max-width: var(--max); margin: 0; }
@@ -192,7 +193,7 @@ h3::before { content: ''; display: inline-block; width: 6px; height: 6px; backgr
       <div class="ev-desc">A time study investigating how much non-value-adding time picking workers spend on waste disposal, and what drives it. My specific contributions: proposing the project, identifying cable reel SKUs as the research focus, collecting SAP data, co-executing field observations, and recommending the scope change from replenishment to picking workers.</div>
     </div>
     <div class="ev-card">
-      <div class="ev-lbl">Supporting Evidence &mdash; Solo</div>
+      <div class="ev-lbl">Supporting Evidence &mdash; Solo &nbsp; <span class="badge">9.8</span></div>
       <div class="ev-title">DS&amp;AI A3: Warehouse Zone Optimisation, SEBN Tilburg</div>
       <div class="ev-desc">Independent analysis of outbound delivery data from a logistics warehouse in the Netherlands. The goal was to identify whether co-locating frequently co-picked SKUs in the same warehouse zone could reduce picker travel time, without disrupting other operations. All analysis, modelling, and the final dashboard were done solo.</div>
     </div>
@@ -235,7 +236,7 @@ h3::before { content: ''; display: inline-block; width: 6px; height: 6px; backgr
       </div>
     </div>
     <div class="ev-card">
-      <div class="ev-lbl">Primary Evidence &mdash; Group Project</div>
+      <div class="ev-lbl">Primary Evidence &mdash; Group Project &nbsp; <span class="badge">6.6</span></div>
       <div class="ev-title">RSB/RSTB: Zeeman Circular Baby Clothing Project</div>
       <div class="ev-desc">A circular economy design project for Zeeman, a European value clothing retailer. The group designed a circular business model covering design, resale, and take-back. My specific ownership: the financial model, including identifying and correcting a structural error in the sorting cost calculations and independently rebuilding the finance tabs.</div>
     </div>
@@ -244,6 +245,7 @@ h3::before { content: ''; display: inline-block; width: 6px; height: 6px; backgr
     <p>My primary individual responsibility was the financial model. During the modelling work I found that sorting costs, the cost of processing returned garments, had been applied incorrectly in an earlier version. I flagged this to the group, corrected the logic, and rebuilt the finance tabs myself with properly structured formulas. I also applied sorting costs to 100% of returned garments rather than a lower assumed rate. That was a deliberate choice: underestimating processing costs is the most common reason circular economy pilots fail at scale, and I wanted the model to reflect a realistic picture.</p>
     <h3>Why This Shows Level 2</h3>
     <p>Level 2 Design requires justifying choices, not just describing them. The financial model correction is the clearest example from my individual work. I did not just find an error and report it. I took ownership of fixing it and rebuilt it in a way that makes every assumption visible and challengeable. That is a different level of design accountability than producing an output and accepting it as correct.</p>
+
     <div class="ref-block">
       <div class="rl">Reflection: Growth since Semester 3</div>
       <p>When I noticed the sorting cost figures looked off, my first instinct was not to flag it immediately. I wanted to understand it first. Some numbers did not match what I knew from real-world context, so I looked up actual sorting cost cases online to check whether our assumptions were grounded in reality. When I confirmed the error, fixing it felt like the only option. Handing it back to the group without a solution would have been easier, but the model was my responsibility.</p>
@@ -269,7 +271,7 @@ h3::before { content: ''; display: inline-block; width: 6px; height: 6px; backgr
       <div class="ev-desc">A recommendation to relocate cable reel SKUs to storage bays adjacent to waste containers, reducing unnecessary picker travel. Requires only a WMS location update, no capital expenditure. My contribution: proposing the recommendation and defending the scope change to the lecturer.</div>
     </div>
     <div class="ev-card">
-      <div class="ev-lbl">Supporting Evidence &mdash; Solo</div>
+      <div class="ev-lbl">Supporting Evidence &mdash; Solo &nbsp; <span class="badge">9.8</span></div>
       <div class="ev-title">DS&amp;AI A3: Phased Pilot Recommendation, SEBN</div>
       <div class="ev-desc">A recommendation to relocate three specific SKUs from one warehouse zone to another as a low-risk pilot. The challenge was that all relocation candidates also appear in other types of orders, so no move is entirely risk-free. The recommendation uses a priority scoring formula that makes this trade-off explicit.</div>
     </div>
@@ -303,9 +305,14 @@ h3::before { content: ''; display: inline-block; width: 6px; height: 6px; backgr
       <div class="ev-desc">A supply chain finance dashboard built in Power BI, showing key financial metrics including Working Capital, Days Sales Outstanding, Days Inventory Outstanding, Days Payable Outstanding, and Cash Conversion Cycle. Fully individual assignment. All DAX measures and the relational data model were built by me.</div>
     </div>
     <div class="ev-card">
-      <div class="ev-lbl">Supporting Evidence &mdash; Solo</div>
+      <div class="ev-lbl">Supporting Evidence &mdash; Solo &nbsp; <span class="badge">9.8</span></div>
       <div class="ev-title">DS&amp;AI A3: Streamlit Dashboard, deployed via GitHub</div>
       <div class="ev-desc">A three-page interactive web dashboard presenting the zone optimisation analysis results in plain language for a non-technical warehouse management audience. Built in Python using VS Code, with GitHub used for version control throughout the project.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-lbl">In-class Assignments &mdash; Individual &nbsp; <span class="badge">10</span> <span class="badge">10</span> <span class="badge">10</span></div>
+      <div class="ev-title">ASCM 2.1 Preference Matrix &middot; 2.2 Expected Value &middot; 2.3 Inventory Measurement</div>
+      <div class="ev-desc">Three individual in-class SCM assignments, each scored 10 out of 10. Consistent analytical execution across the semester.</div>
     </div>
     <h3>What I Did</h3>
     <p>Both assignments were fully solo. For the ASCM Power BI dashboard, I built the relational data model from scratch, connecting tables for sales orders, purchase orders, inventory, customers, suppliers, and a calendar. I wrote all DAX measures for the financial KPI calculations and added conditional formatting to the KPI cards to signal whether values were within target ranges. Every technical decision was mine. The AI Level 2 compliance rules for this assignment meant I had to understand and be able to explain every line of logic rather than just produce output.</p>
@@ -329,6 +336,7 @@ h3::before { content: ''; display: inline-block; width: 6px; height: 6px; backgr
         <div class="vg-label">DS&amp;AI Assignment 3 &mdash; Grade 9.8</div>
       </div>
     </div>
+
     <div class="ref-block">
       <div class="rl">Reflection: Growth since Semester 3</div>
       <p>The dashboards I had built at CEVA before this semester were practical tools for a small internal audience. They made specific data visible to specific people, and that was enough. I had never needed DAX measures, relational data models, or conditional formatting logic tied to financial KPIs. The ASCM assignment changed that. Building a dashboard that had to meet an academic standard, with defined KPIs, structured relationships between tables, and logic that anyone could audit, showed me how much more Power BI can do than what I had been using it for. I had been working with a fraction of the tool.</p>
